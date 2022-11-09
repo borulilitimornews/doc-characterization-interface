@@ -10,8 +10,12 @@
             
             {{ news.content|safe }}
             <small style="padding-right: 10px">
-                <strong>Status: {{news.status }}</strong> 
+                <strong>Status: {{news.status }}</strong>
             </small>
+            <div style="padding-right: 10px">
+                <span class="label label-warning"><a style="color: #ffff;" href="/news/{{ news.id }}/change">Edit</a></span>
+                <span class="label label-warning"><a style="color: #ffff;" href="/">Back</a></span> 
+            </div>
         </div>
     </div>
 </div>
