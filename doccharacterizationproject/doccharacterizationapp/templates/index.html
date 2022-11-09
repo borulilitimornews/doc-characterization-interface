@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row pt-30">
+    <div class="container">
+      <div class="col-md-12">
+          <h3>Document characterization platform</h3>
+          <p>This platform is used to characterized Tetun documents to support the PhD research project.</p>
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div class="container">
+          <div class="col-md-12">
+              {% include "news/_news_list.html" %}
+          </div>
+          <div class="col-md-12">
+              <div class="pagination">
+                  <span class="step-links">
+                      {% if paper_list.has_previous %}
+                          <a href="?page=1">&laquo; first</a>
+                          <a href="?page={{ news_list.previous_page_number }}">previous</a>
+                      {% endif %}
+                          <span class="current">
+                              Page {{ news_list.number }} of {{ news_list.paginator.num_pages }}
+                          </span>
+                      {% if paper_list.has_next %}
+                          <a href="?page={{ news_list.next_page_number }}">next</a>
+                          <a href="?page={{ news_list.paginator.num_pages }}">last &raquo;</a>
+                      {% endif %}
+                  </span>
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        {% block head %}
+            {% include "header.html" %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container-fluid body-content">
+            <div id="menu">
+                {% block menu %}
+                    {% include "menu.html" %}
+                {% endblock %}
+            </div>
+    
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+    
+            <div id="footer">
+                {% block footer %}
+                    {% include "footer.html" %}
+                {% endblock %}
+            </div>
+         </div>
+    </body>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/jquery.validate.js"></script>
+    <script src="/static/scripts/jquery-3.3.1.min.js"></script>
+</html>

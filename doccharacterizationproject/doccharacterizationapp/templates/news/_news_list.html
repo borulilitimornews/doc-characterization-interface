@@ -1,0 +1,35 @@
+<!--search box for desktop-->
+<form action="/search-result/" method="GET">
+    <div class="input-group input-group-desktop">
+       <!-- <input name='text' required class="form-control input-md" type="text" placeholder="Search a document...">
+        <div class="input-group-append">
+            <button class="btn btn-info" style="position:absolute" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div> -->
+    </div>
+</form>
+<span class="label label-danger"><a style="color: #ffff;" href="/news/add">Add New</a></span><br />
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Title</th>
+            <th>Lead</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in news_list %}
+            <tr>
+                <td><a href="http://old.timornews.tl/TL/Notisia/{{ item.slug}}" target="_blank"> {{ item.title }} </a> </td>
+                <td> {{ item.lead|safe|truncatechars:70 }} </td>
+                <td>{{ item.status }}</td>
+                <td><span class="label label-warning"><a style="color: #ffff;" href="/news/{{ item.id }}/edit">Edit</a></span>
+                <span class="label label-warning"><a style="color: #ffff;" href="/news/{{ item.id }}/detail">Detail</a></span></td>
+                <!-- 
+                    <td><a href="/news/{{ news.id }}/confirm/delete/">Delete</a> </td> 
+                -->
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

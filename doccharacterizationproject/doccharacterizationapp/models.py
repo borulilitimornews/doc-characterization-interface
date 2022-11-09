@@ -1,4 +1,6 @@
 from django.db import models
+from tinymce.models import HTMLField
+
 
 # Create your models here.
 class Status(models.Model):
@@ -9,10 +11,11 @@ class Status(models.Model):
 
 
 class News(models.Model):
-    url_slug = models.CharField(max_length=100)
+    slug = models.CharField(max_length=100)
     title = models.CharField(max_length=200)
-    content = models.TextField(max_length=5000)
-    status = models.ForeignKey(Status, on_delete=models.CASCADE)
+    lead = HTMLField(max_length=500, blank=True)
+    content = HTMLField(max_length=5000)
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, default=1)
 
     def __str__(self) -> str:
         return self.title

@@ -1,0 +1,256 @@
+/* Small and extra small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .modal-body {
+        padding: 0;
+    }
+
+    .container-fluid{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .title-details-news {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .title-recommended-news.red-color.notisia-ikus-mobile {
+        padding-top: 0px;
+    }
+
+    .pt-60.mobile-adjustment {
+        padding-top: 50px;
+    }
+
+    .info-image-home{
+        visibility: hidden;
+    }
+
+    .slide-mobile{
+        visibility: visible;
+    }
+
+    .mt-mobile{
+        margin-top: -15px;
+    }
+
+    .img-thumbnail-news{
+        padding-top: 0;
+    }
+
+    .img-home{
+        min-height: 250px;
+        max-height: 250px;
+    }
+
+    .adsbanner728x90 {
+        max-height: 60px;
+        min-height: 60px;
+    }
+
+    .vagas-wrap {
+        margin-bottom: 15px;
+    }
+
+    .img-thumbnail-news-medium{
+        height: 280px;
+    }
+
+    select,
+    textarea {
+        max-width: 270px;
+    }
+    
+    .row > h1 {
+        font-size: 25px;
+    }
+
+    .hr-footer {
+        margin-top: 0px;
+    }
+
+    .input-group {
+        max-width: 170px;
+        padding-top: 80px;
+        float: right;
+        padding-right: 40px;
+        margin-right: 15px;
+    }
+
+    .input-group-mobile {
+        visibility: visible;
+    }
+
+    .input-group-desktop {
+        margin-top: -80px;
+        padding-bottom: -10px;
+        /*visibility: hidden;*/
+    }
+
+    .gj-banner {
+        padding-top: 15px;
+    }
+
+    /* For ContentNews Field*/
+    .content-news {
+        max-width: 280px;
+        max-height: 250px;
+    }
+
+    .title-recommended-news {
+        font-size: 25px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    .navbar-inverse {
+        border-bottom: solid 2px yellow;
+        border-top: solid 2px #e20613;
+    }
+
+    .nav > li {
+        font-size: 12px;
+    }
+
+    .navbar-toggle {
+        margin-top: 20px;
+    }
+
+    .nav > li > a {
+        padding: 8px 15px;
+    }
+
+    .navbar-inverse .navbar-toggle {
+        border-color: #fff;
+    }
+
+    .navbar-inverse .navbar-collapse {
+        border-top-color: #fff;
+    }
+
+    .navbar-nav {
+        padding-top: 0px;
+        margin-right: 0px;
+    }
+
+        .navbar-nav > li {
+            padding-top: 0px;
+        }
+
+    .logo-position {
+        margin-left: 5px;
+    }
+
+    /*Envelop-Top-Border*/
+    .envelope-icon {
+        border-top: solid 1px #fff;
+    }
+
+    .upt-envelope {
+        margin-left: 0px;
+        padding-top: 8px;
+    }
+
+    /*User Cicle*/
+    .upt-user-cicle {
+        margin-left: 13px;
+    }
+
+    /* Slide Show */
+    .Carousel {
+        padding-top: 65px;
+    }
+
+    .carousel-control {
+        opacity: 0;
+    }
+
+    .img-slide-max-height {
+        /* padding-top: 65px; */
+        min-height: 320px;
+        max-height: 320px;
+    }
+
+    .bg-image {
+        height: 250px;
+    }
+
+    .category-news-slide {
+        font-size: 10px;
+        line-height: 8px;
+        padding-top: 0px;
+    }
+
+    .title-news{
+        font-size: 12px;
+        line-height: 12px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .category-news {
+        padding-top: 5px;
+    }
+
+    .datetime-news {
+        font-size: 10px;
+        line-height: 10px;
+        padding-top: 5px;
+    }
+
+    /* Vagas & Eventu */
+    .vagas-news > .news-wrap .date {
+        font-size: 10px;
+    }
+
+    .mt-10 {
+        margin-top: 10px
+    }
+
+    .nh-pt-15 {
+        padding-top: 0px;
+    }
+
+    .pt-55 {
+        padding-top: 0;
+    }
+
+    .truncate-vagas, .moreinfo {
+        font-size: 12px;
+    }
+
+    .m-title-notisia-ohin {
+        margin-top: 75px;
+    }
+
+    .title-recommended-vaga {
+        font-size: 25px;
+    }
+
+    .vagaanunsiu-pt-15-m {
+        padding-top: 15px;
+    }
+
+        /* Notisia Hotu */
+    .img-bg-listanotisiahotu {
+        width: 50%;
+    }
+
+    .contentnews-listanotisiahotu {
+        padding-top: 0px;
+    }
+
+    .data-hora-notisiahotu {
+        padding-left: 20px;
+        margin-top: 0px;
+    }
+
+    .media-heading-notisiahotu {
+        margin-top: -5px;
+    }
+
+    /* Footer for Login and Admin Panel*/
+    .foot > ul > li {
+        margin-left: -20px;
+    }   
+}

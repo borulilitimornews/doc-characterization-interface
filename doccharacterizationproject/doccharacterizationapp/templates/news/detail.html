@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row pt-30">
+    <div class="col-md-12">       
+        <span class="title-details-news">
+            {{ news.title|upper }}
+        </span>
+        
+        {{ news.content|safe }}
+        <small style="padding-right: 10px">
+            <strong>Status: {{news.status }}</strong> 
+        </small>
+    </div>
+</div>
+
+{% endblock %}
