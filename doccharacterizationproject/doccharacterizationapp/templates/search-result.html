@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row pt-40">
+    <div class="container">
+        <h3>Searched results</h3>
+        <div>Searched result for keyword <strong>{{ searched_text }}.</strong></div>
+        {% include "news/_news_list.html" %}
+    </div>
+</div>
+
+{% endblock %}

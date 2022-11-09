@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import NewsForm
 from .models import News
+from django.db.models import Q
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
@@ -19,6 +20,33 @@ def index(request):
         'news_list': page_obj
     }
     return render(request, 'index.html', context)
+
+
+# GET search text
+def search_result(request):
+    searched_text = request.GET.get("text")
+    search_news_list = (
+        News.objects.filter(
+            Q(title__icontains=searched_text)
+            | Q(status__name__icontains=searched_text)
+        )
+        .distinct()
+        .order_by("-id")
+    )
+    context = {
+        "news_list": search_news_list,
+        "searched_text": searched_text,
+    }
+
+    # if search result is empty
+    if not search_news_list:
+        return redirect("/search-not-found")
+    return render(request, "search-result.html", context)
+
+
+def search_not_found(request):
+    return render(request, "search-not-found.html")
+
 
 @login_required()
 def news_add(request):
@@ -47,7 +75,7 @@ def news_edit(request, news_id):
         form = NewsForm(request.POST, instance=news)
         if form.is_valid():
             news = form.save()
-            return redirect("/news/list")
+            return redirect("/")
     else:
         form = NewsForm(instance=news)
     context = {"form": form}

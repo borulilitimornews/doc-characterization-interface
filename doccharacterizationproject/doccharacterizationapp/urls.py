@@ -8,6 +8,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('accounts/login/', auth_views.LoginView.as_view()),
     path('accounts/logout/', views.logout_view, name='log-out'),
+    path('search-result/', views.search_result, name='search-result'),
+    path('search-not-found/', views.search_not_found, name='search-not-found'),
     path('news/list/', views.index, name='news-list'),
     #path('news/add/', views.news_add, name='news-add'),
     path('news/<int:news_id>/detail/', views.news_detail, name='news-detail'),
