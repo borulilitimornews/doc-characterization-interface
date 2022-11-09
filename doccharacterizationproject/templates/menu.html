@@ -11,10 +11,12 @@
             <a href="/"><img class="img-responsive logo-position" src="/static/app-img/LogotipoSI.png" /></a>
         </div>
         <div class="navbar-collapse collapse">
-            <!--login link-->
+            <!-- login link -->
+            {% if user.is_authenticated %}
             <span style="float: right; padding-top: 15px;">
-                <a href="/admin" target="_blank"><i class="fas fa-user-circle upt-user-cicle" style="color: white;"></i> <br /> <span style="color: white;">Sign-in</span></a>
+                <a href="/accounts/logout/"><i class="fas fa-user-circle upt-user-cicle" style="color: white;"></i> <br /> <span style="color: white;">log out</span></a>
             </span>
+            {% endif %}
         </div>       
     </div>
 </div>

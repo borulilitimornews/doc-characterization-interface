@@ -55,6 +55,11 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# session setting
+SESSION_COOKIE_AGE = 300  # 15 minutes
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 ROOT_URLCONF = "doccharacterizationproject.urls"
 
 TINYMCE_DEFAULT_CONFIG = {

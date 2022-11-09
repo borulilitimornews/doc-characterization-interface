@@ -5,13 +5,15 @@
 {% load crispy_forms_tags %}
 
 <div class="row pt-30">
-    <h1>Add Document</h1> <br />
-    <div class="col-md-12">
-        <form method="post">
-            {% csrf_token %}
-            {{ form|crispy }}
-        <input type="submit" value="Save">
-        </form>
+    <div class="container">
+        <div class="col-md-12">
+            <h2>Add Document</h2> <br />
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+            <input type="submit" value="Save">
+            </form>
+        </div>
     </div>
 </div>
 
