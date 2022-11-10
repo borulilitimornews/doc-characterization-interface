@@ -11,8 +11,8 @@ class Status(models.Model):
 
 
 class News(models.Model):
-    slug = models.CharField(max_length=100)
-    title = models.CharField(max_length=200)
+    slug = models.CharField(max_length=300)
+    title = models.CharField(max_length=250)
     lead = HTMLField(max_length=500, blank=True)
     content = HTMLField(max_length=5000)
     status = models.ForeignKey(Status, on_delete=models.CASCADE, default=1)

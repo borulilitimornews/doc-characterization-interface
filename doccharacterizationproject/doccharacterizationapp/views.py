@@ -10,8 +10,8 @@ from django.contrib.auth import logout
 # Create your views here.
 #@login_required()
 def index(request):
-    news_all = News.objects.order_by("-id")
-    paginator = Paginator(news_all, 15)
+    news_all = News.objects.order_by("id")
+    paginator = Paginator(news_all, 20)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
