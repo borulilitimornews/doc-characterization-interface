@@ -3,14 +3,17 @@
 {% block content %}
 <div class="row pt-30">
     <div class="container">
-        <div class="col-md-12">       
+        <div class="col-md-12">      
             <span class="title-details-news">
                 {{ news.title|upper }}
-            </span>
-            
+            </span> 
+            <div class="lead pt-10 pb-10" style="background-color: rgb(233, 233, 189); padding-left: 5px;">
+                {{ news.lead }}
+            </div>        
             {{ news.content|safe }}
             <small style="padding-right: 10px">
-                <strong>Status: {{news.status }}</strong>
+                <span style="padding-right: 15px;"><strong>Published date</strong> {{ news.published_date }}</span> 
+                <span><strong>Status:</strong> {{news.status }}</span>
             </small>
             <div style="padding-right: 10px">
                 <span class="label label-warning"><a style="color: #ffff;" href="/news/{{ news.id }}/change">Edit</a></span>

@@ -11,11 +11,15 @@ class Status(models.Model):
 
 
 class News(models.Model):
-    slug = models.CharField(max_length=300)
+    docno = models.CharField(max_length=15)
+    url = models.CharField(max_length=300)
     title = models.CharField(max_length=250)
     lead = HTMLField(max_length=500, blank=True)
     content = HTMLField(max_length=5000)
+    published_date = models.IntegerField()
     status = models.ForeignKey(Status, on_delete=models.CASCADE, default=1)
 
     def __str__(self) -> str:
         return self.title
+
+
