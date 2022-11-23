@@ -14,7 +14,7 @@
     <thead class="thead-light">
         <tr>
             <th>Title</th>
-            <th>Lead</th>
+            <th>Headline</th>
             <th>Status</th>
         </tr>
     </thead>
@@ -26,7 +26,7 @@
                 {% else %}
                     <td><a href="{{item.url}}" target="_blank">{{ item.title|truncatechars:75 }}</a></td>
                 {% endif %}
-                <td> {{ item.lead|safe|truncatechars:35 }} </td>
+                <td> {{ item.headline|safe|truncatechars:35 }} </td>
                 <td>{{ item.status }}</td>
                 <td><span class="label label-warning"><a style="color: #ffff;" href="/news/{{ item.id }}/change">Edit</a></span>
                 <span class="label label-warning"><a style="color: #ffff;" href="/news/{{ item.id }}/detail">Detail</a></span></td>
